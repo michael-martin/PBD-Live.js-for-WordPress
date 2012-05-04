@@ -14,7 +14,7 @@
  * - http://twitter.com/mrtnkl
  */
 function pbd_livejs_script() {
-	if(is_user_logged_in() && ($_SERVER["SERVER_NAME"] == 'localhost' || $_SERVER["SERVER_NAME"] == '127.0.0.1')) {
+	if(is_user_logged_in() && ($_SERVER["SERVER_NAME"] == 'localhost' || $_SERVER["SERVER_NAME"] == '127.0.0.1' || $_SERVER["SERVER_ADDR"] == '127.0.0.1')) {
 		echo '<script type="text/javascript" src="'. plugins_url('js/live.js#css,js', __FILE__) .'"></script>';
 	}
 }
